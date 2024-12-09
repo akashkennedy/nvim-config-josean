@@ -4,6 +4,10 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	opts = function()
+		require("notify").setup({
+			-- other stuff
+			background_colour = "#000000",
+		})
 		require("catppuccin").setup({
 			flavour = "auto", -- latte, frappe, macchiato, mocha
 			background = { -- :h background
@@ -54,6 +58,7 @@ return {
 		})
 
 		-- setup must be called before loading
+
 		vim.cmd.colorscheme("catppuccin")
 	end,
 }
